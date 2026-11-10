@@ -149,7 +149,7 @@ section{padding:0 var(--pad)}
 <header class="hero">
   <h1>把设备调通，<br><span class="dim">再让它一直跑。</span></h1>
   <div class="col">
-    <p class="lead">电气自动化出身，现在做机器人系统集成的电控：桁架机械手、立柱码垛、机器人上下料。画 EPLAN 图纸、编电气 BOM、写 PLC 程序、现场调试。之前在半导体设备厂做晶圆分选设备。</p>
+    <p class="lead">电气自动化出身。现在做机器人系统集成的电控：桁架机械手、立柱码垛、机器人上下料。之前做半导体设备研发，从零做出晶圆分选机型的电气与程序。画 EPLAN 图纸、编电气 BOM、写 PLC 程序、现场调试。</p>
     <div class="meta">
       <span>黄河交通学院 · 机器人工程（专升本在读）</span>
       <span>专科：黄河水利职业技术大学 · 电气自动化技术 · 2026 届</span>
@@ -212,22 +212,22 @@ section{padding:0 var(--pad)}
       </article>
 
       <article class="proj">
-        <h3>晶圆插片机 · 电气负责人</h3>
-        <div class="stack"><span>S7-1200</span><span>伺服 ×2</span><span>步进 ×4</span><span>触摸屏</span></div>
+        <h3>晶圆插片机 · 电气研发负责人</h3>
+        <div class="stack"><span>S7-1200</span><span>伺服 ×2</span><span>步进 ×4</span><span>触摸屏</span><span>研发项目</span></div>
         <div class="body">
-          <p>半导体设备。主导电气选型、柜内接线和 PLC 程序，实现 4/6/8 英寸硅片分选：气嘴吹开硅片、无痕吸盘取片、传送带送料、硅片盒顶升。</p>
-          <p>动作链是 2 个伺服 + 2 个 42 丝杆步进 + 2 个 42 步进。和机械工程师逐点定传感器位置，测灵敏度、排动作时序，独立做完这款设备的程序和画面。</p>
-          <div class="out">交付：电气原理图 + PLC 程序 + 触摸屏画面</div>
+          <p>半导体设备研发项目，从零到交付，不是现场改造。电气方案、元件选型、原理图、PLC 程序、触摸屏画面都归我，跟到样机调试和量产迭代。</p>
+          <p>实现 4/6/8 英寸硅片分选：气嘴吹开硅片、无痕吸盘取片、传送带送料、硅片盒顶升。动作链是 2 个伺服 + 2 个 42 丝杆步进 + 2 个 42 步进——和机械工程师逐点定传感器位置、测灵敏度、排动作时序，反复改到连续跑得住。</p>
+          <div class="out">交付：电气原理图 + PLC 程序 + 触摸屏画面 + 样机调试</div>
         </div>
       </article>
 
       <article class="proj">
         <h3>晶振石英片分捡机</h3>
-        <div class="stack"><span>PLC</span><span>伺服转盘</span><span>基恩士光电</span><span>视觉检测</span></div>
+        <div class="stack"><span>PLC</span><span>伺服转盘</span><span>基恩士光电</span><span>视觉对接</span><span>研发项目</span></div>
         <div class="body">
-          <p>石英片由振动盘上料，落到伺服驱动的圆形带槽玻璃转盘上。入料处的基恩士光电给信号，PLC 依据伺服编码器算每一片的初始位置。</p>
-          <p>片子经过视觉工位触发拍照判缺陷，视觉回传缺陷类型，到对应区域吹气分仓，满料报警。</p>
-          <div class="out">交付：PLC 程序 + 电气接线 + 与视觉团队的接口联调</div>
+          <p>研发项目。石英片由振动盘上料，落到伺服驱动的圆形带槽玻璃转盘上。入料处的基恩士光电给信号，PLC 依据伺服编码器算每一片的初始位置——片子一直在转盘上走，位置得靠自己算，不能靠工位传感器一片片等。</p>
+          <p>到视觉工位触发拍照判缺陷，视觉回传缺陷类型，我这边把类型映射到对应的分仓气嘴，吹气分选，满料报警。</p>
+          <div class="out">交付：PLC 程序 + 电气接线 + 视觉接口定义与联调</div>
         </div>
       </article>
 
@@ -277,6 +277,7 @@ section{padding:0 var(--pad)}
         <li>EtherCAT 总线组网<small>PLC—驱动器—机械臂—工控机，多站通讯</small></li>
         <li>伺服选型与调试<small>汇川 SV630N、德力西 CDS560、华城 HC6H 绝对值</small></li>
         <li>运动机构<small>桁架 / 直角坐标、旋转料仓、四轴摆臂码垛</small></li>
+        <li>通信协议<small>EtherCAT、EtherNet/IP、Modbus TCP/RTU；用主站/从站模拟器对过点</small></li>
       </ul>
     </div>
     <div class="skill-col">
@@ -287,6 +288,7 @@ section{padding:0 var(--pad)}
         <li>电柜布局与接线<small>布局、走线、线号、上电检查</small></li>
         <li>现场调试<small>IO 点检、动作时序、连锁与急停回路</small></li>
         <li>传感与视觉联调<small>基恩士光电、缺陷检测工位、时序对齐</small></li>
+        <li>工业读码器<small>海康固定式读码器组态，走 EDS 文件与 Lua 脚本改逻辑</small></li>
         <li>芯片测试<small>朗讯 ATE：开短路、高低电平、输入电流</small></li>
       </ul>
     </div>
@@ -302,6 +304,15 @@ section{padding:0 var(--pad)}
       </ul>
     </div>
   </div>
+</section>
+
+<section class="now">
+  <h2>攒下来的东西</h2>
+  <ul>
+    <li><strong>汇川 PLC 功能块库</strong><span>把单轴控制、包装机、模量这些反复用到的逻辑封成 FB，配一套 IO 与元件库（正反转、气缸、伺服），新项目直接调，不用每台重写</span></li>
+    <li><strong>HMI 模板工程</strong><span>一套可复用的触摸屏画面：手动/自动切换、参数设定、报警记录，改字改地址就能上下一台机</span></li>
+    <li><strong>图纸与 BOM 骨架</strong><span>桁架、料仓、摆臂这几类机构的图纸和 BOM 有底稿，改参数出下一版</span></li>
+  </ul>
 </section>
 
 <section class="certs">
