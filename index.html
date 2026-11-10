@@ -125,6 +125,16 @@ section{padding:0 var(--pad)}
 .foot .links{display:grid;gap:.5rem;font-size:var(--step-body);max-width:40ch}
 .foot .tail{font-size:var(--step-small);opacity:.72;margin-top:1rem}
 
+
+.media{padding-top:var(--line-gap)}
+.media-grid{display:grid;gap:clamp(1rem,2.5vw,1.75rem);grid-template-columns:minmax(0,1fr)}
+@media (min-width:52rem){.media-grid{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}}
+.media-grid .shot img{aspect-ratio:1.414/1;object-fit:cover}
+.shot{margin:0;display:grid;gap:.6rem}
+.shot img{width:100%;height:auto;display:block;background:var(--surface);border:1px solid rgba(22,24,26,.1)}
+.shot figcaption{font-size:var(--step-small);color:var(--muted);line-height:1.4}
+.cert-grid{display:grid;gap:clamp(.8rem,2vw,1.4rem);grid-template-columns:minmax(0,1fr);margin-top:clamp(1.5rem,3vw,2.25rem)}
+@media (min-width:38rem){.cert-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 @media (max-width:48rem){
   :root{--line-gap:clamp(2.75rem,11vw,4rem)}
@@ -245,6 +255,23 @@ section{padding:0 var(--pad)}
   </div>
 </div>
 
+<section class="media">
+  <div class="sec-head">
+    <h2>图纸和现场</h2>
+    <p>左边是桁架项目的配电页，EPLAN 出的图，标题栏已遮；右边是这台设备在机床上跑起来的样子。</p>
+  </div>
+  <div class="media-grid">
+    <figure class="shot">
+      <img src="images/eplan-power.jpg" alt="EPLAN 绘制的桁架项目配电原理图" loading="lazy" decoding="async">
+      <figcaption>EPLAN 原理图 · 配电页。总开关 QF1 下分三路：高压水泵 3P 16A、华城控制器 2P 20A、料仓 2P 20A</figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="images/hangjia-site.jpg" alt="桁架机械手在数控机床上自动上下料" loading="lazy" decoding="async">
+      <figcaption>桁架机械手 · 机床自动上下料，夹爪伸入卡盘取放料</figcaption>
+    </figure>
+  </div>
+</section>
+
 <section class="awards">
   <div class="sec-head">
     <h2 id="awards">荣誉</h2>
@@ -316,13 +343,27 @@ section{padding:0 var(--pad)}
 </section>
 
 <section class="certs">
-  <h2>资格证</h2>
+  <h2>获奖证书与资格证</h2>
   <div class="cert-row">
     <span>电工高级</span>
     <span>低压电工证</span>
     <span>ABB 机械臂（初级）</span>
     <span>车工（初级）</span>
     <span>C1 驾驶证</span>
+  </div>
+  <div class="cert-grid">
+    <figure class="shot">
+      <img src="images/cert-guosai.jpg" alt="第十九届全国大学生智能汽车竞赛全国总决赛三等奖证书" loading="lazy" decoding="async">
+      <figcaption>2024 · 全国大学生智能汽车竞赛<br>全国总决赛三等奖</figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="images/cert-elec2022.jpg" alt="2022 年河南省中等职业教育技能大赛电气安装与维修一等奖证书" loading="lazy" decoding="async">
+      <figcaption>2022 · 河南省中职技能大赛<br>电气安装与维修 一等奖</figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="images/cert-2021.jpg" alt="2021 年维修电工技能竞赛省级一等奖证书" loading="lazy" decoding="async">
+      <figcaption>2021 · 维修电工技能竞赛<br>省级一等奖</figcaption>
+    </figure>
   </div>
 </section>
 
