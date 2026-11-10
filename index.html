@@ -149,7 +149,7 @@ section{padding:0 var(--pad)}
 <header class="hero">
   <h1>把设备调通，<br><span class="dim">再让它一直跑。</span></h1>
   <div class="col">
-    <p class="lead">电气自动化出身。做过半导体设备的电气与程序：选型、接线、PLC、伺服与步进、传感器和视觉联调；也写嵌入式固件和上位机。</p>
+    <p class="lead">电气自动化出身，现在做机器人系统集成的电控：桁架机械手、立柱码垛、机器人上下料。画 EPLAN 图纸、编电气 BOM、写 PLC 程序、现场调试。之前在半导体设备厂做晶圆分选设备。</p>
     <div class="meta">
       <span>黄河交通学院 · 机器人工程（专升本在读）</span>
       <span>专科：黄河水利职业技术大学 · 电气自动化技术 · 2026 届</span>
@@ -165,17 +165,57 @@ section{padding:0 var(--pad)}
 <div class="dark">
   <div class="dark-in">
     <div class="sec-head">
-      <h2 id="work">做过的设备</h2>
-      <p>有实物、有程序、有交付。前三个是产线上的，后两个是自己攒的。</p>
+      <h2 id="work">交付过的设备</h2>
+      <p>七个项目，前五个在厂里：机器人上下料、码垛、桁架、老机改造、半导体分选设备。每一个都能说清我负责哪一段。</p>
     </div>
 
     <div class="projects">
 
       <article class="proj">
+        <h3>机器人上下料线 · 三机械臂组网</h3>
+        <div class="stack"><span>3 台机械臂</span><span>EtherCAT</span><span>汇川 EASY521</span><span>IT7070EI</span></div>
+        <div class="body">
+          <p>三台机械臂 + 工控机 + PLC 的 EtherCAT 总线组网，每台臂单独一路通讯线，HMI 和工控机各留一路。整柜的电控设计、元件选型、BOM 编制、接线到现场联调都是我做。</p>
+          <p>汇川 EASY521-0808TN 做逻辑控制，IT7070EI 触摸屏做交互，三台机械臂与工控机之间的信号走总线。</p>
+          <div class="out">交付：电气 BOM（制表）+ 原理图 + PLC 程序 + 现场调试</div>
+        </div>
+      </article>
+
+      <article class="proj">
+        <h3>海康威视立柱码垛机</h3>
+        <div class="stack"><span>四轴伺服</span><span>SV630N</span><span>GL20 远程 IO</span><span>摆臂</span></div>
+        <div class="body">
+          <p>立柱式摆臂码垛机。X、Z、R 加翻转共四轴伺服，功率分别是 1.8、1.8、0.75、1.8 kW，汇川 SV630N 驱动器；PLC 用 EASY521 配 GL20 远程 IO 扩展 16 进 16 出晶体管模块。</p>
+          <p>按客户的技术要求做电控方案与程序，从选型清单到柜内布局、从 IO 分配表到现场动作调试。</p>
+          <div class="out">交付：电控方案 + BOM + 程序 + 调试</div>
+        </div>
+      </article>
+
+      <article class="proj">
+        <h3>桁架机械手 + 旋转料仓</h3>
+        <div class="stack"><span>桁架</span><span>华城伺服</span><span>德力西 CDS560</span><span>汇川 Easy301</span></div>
+        <div class="body">
+          <p>两套电控：桁架机械手（400W ×1、750W ×2、750W 带刹车 ×1，17 位多圈绝对值）与旋转料仓（3 台德力西 CDS560 伺服）。</p>
+          <p>料仓 PLC 用汇川 Easy301，伺服的使能与报警走 DI/DO 硬线，旋转定位与上下料时序联动。</p>
+          <div class="out">交付：两套 BOM + 电气图纸 + 程序</div>
+        </div>
+      </article>
+
+      <article class="proj">
+        <h3>纺织机械电控改造（二纺机）</h3>
+        <div class="stack"><span>EPLAN</span><span>华城伺服</span><span>老机改造</span></div>
+        <div class="body">
+          <p>老机台电控改造：重新出整套电气图纸、重编 BOM、换伺服与驱动，按原机动作逻辑复现并补上缺的连锁。</p>
+          <p>改造类项目的难点不在画图，在于停机窗口内一次开起来——图纸、BOM、程序任何一处错都要在现场付代价。</p>
+          <div class="out">交付：EPLAN 图纸 + BOM + 程序</div>
+        </div>
+      </article>
+
+      <article class="proj">
         <h3>晶圆插片机 · 电气负责人</h3>
         <div class="stack"><span>S7-1200</span><span>伺服 ×2</span><span>步进 ×4</span><span>触摸屏</span></div>
         <div class="body">
-          <p>主导电气选型、柜内接线和 PLC 程序，实现 4/6/8 英寸硅片分选：气嘴吹开硅片、无痕吸盘取片、传送带送料、硅片盒顶升。</p>
+          <p>半导体设备。主导电气选型、柜内接线和 PLC 程序，实现 4/6/8 英寸硅片分选：气嘴吹开硅片、无痕吸盘取片、传送带送料、硅片盒顶升。</p>
           <p>动作链是 2 个伺服 + 2 个 42 丝杆步进 + 2 个 42 步进。和机械工程师逐点定传感器位置，测灵敏度、排动作时序，独立做完这款设备的程序和画面。</p>
           <div class="out">交付：电气原理图 + PLC 程序 + 触摸屏画面</div>
         </div>
@@ -192,30 +232,10 @@ section{padding:0 var(--pad)}
       </article>
 
       <article class="proj">
-        <h3>室外 5G 远程驾驶无人车</h3>
-        <div class="stack"><span>全国大学生智能汽车竞赛</span><span>5G 远程链路</span><span>团队</span></div>
-        <div class="body">
-          <p>第十九届全国大学生智能汽车竞赛，室外 5G 远程驾驶无人车赛项，全国总决赛三等奖。</p>
-          <p>我负责车体电气与传感链路、远程控制链路的联调：车端信号怎么采、怎么传，延时和丢包怎么在现场压下去。</p>
-          <div class="out">2024 · 中国自动化学会</div>
-        </div>
-      </article>
-
-      <article class="proj">
-        <h3>洗车机顺序控制系统</h3>
-        <div class="stack"><span>TIA Portal</span><span>SCL</span><span>CPU 1518T-3 PN</span><span>KTP1200</span></div>
-        <div class="body">
-          <p>用状态字驱动顺控，不走 S 步：状态寄存器 + 定时器 + 互锁条件，每一步的进入退出条件都写在 SCL 里，HMI 上能直接看到当前是第几步。</p>
-          <p>触摸屏做画面与参数设定，虚拟轴做定位运动。</p>
-          <div class="out">交付：程序 + 电气原理图 + 计算书</div>
-        </div>
-      </article>
-
-      <article class="proj">
         <h3>写字机：从字形到走刀</h3>
         <div class="stack"><span>ESP32</span><span>ESP-IDF</span><span>FreeRTOS</span><span>Python</span></div>
         <div class="body">
-          <p>固件侧做运动控制：G-code 解析、加减速规划、步进脉冲调度，跑在 FreeRTOS 任务里，串口和运动解耦。</p>
+          <p>自己做的机器。固件侧做运动控制：G-code 解析、加减速规划、步进脉冲调度，跑在 FreeRTOS 任务里，串口和运动解耦。</p>
           <p>电脑侧用 Python 出形：文字转笔画轨迹，再生成给固件的指令流。视觉部分负责找纸和定位。</p>
           <div class="out">状态：固件与轨迹生成已跑通，整机联调中</div>
         </div>
@@ -251,25 +271,30 @@ section{padding:0 var(--pad)}
     <div class="skill-col">
       <h3>工业控制</h3>
       <ul>
-        <li>西门子 S7-1200 / 1500 / 200<small>TIA Portal；LD、FBD、SFC、ST 四种写法都写过</small></li>
-        <li>三菱 / 汇川 2U·3U / 欧姆龙<small>多品牌程序移植、老设备改型维护</small></li>
-        <li>运动控制<small>固高 GTS800、伺服与步进点位、电子齿轮</small></li>
-        <li>HMI 与配方<small>触摸屏画面、参数设定、报警记录</small></li>
+        <li>汇川 EASY521 / Easy301<small>现职主力平台；配 IT7070EI 触摸屏、GL20 远程 IO</small></li>
+        <li>西门子 S7-1200 / 1500 / 200<small>TIA Portal；LD、FBD、SCL 都写过</small></li>
+        <li>三菱 / 欧姆龙<small>老机台维护与程序移植</small></li>
+        <li>EtherCAT 总线组网<small>PLC—驱动器—机械臂—工控机，多站通讯</small></li>
+        <li>伺服选型与调试<small>汇川 SV630N、德力西 CDS560、华城 HC6H 绝对值</small></li>
+        <li>运动机构<small>桁架 / 直角坐标、旋转料仓、四轴摆臂码垛</small></li>
       </ul>
     </div>
     <div class="skill-col">
-      <h3>电气与硬件</h3>
+      <h3>电气设计与交付</h3>
       <ul>
-        <li>电气设计<small>原理图、元件选型、柜内接线、上电调试</small></li>
-        <li>传感与视觉联调<small>基恩士光电、缺陷检测工位、动作时序对齐</small></li>
-        <li>嵌入式<small>51 / STM32 / GD32，做过简易示波器和万用表</small></li>
-        <li>FPGA<small>Verilog、Quartus / Vivado，用过 xc7a35t</small></li>
+        <li>EPLAN 电气图纸<small>整套机台原理图，从符号库到端子表</small></li>
+        <li>电气 BOM<small>选型、比价、下单、到货核对，独立制表</small></li>
+        <li>电柜布局与接线<small>布局、走线、线号、上电检查</small></li>
+        <li>现场调试<small>IO 点检、动作时序、连锁与急停回路</small></li>
+        <li>传感与视觉联调<small>基恩士光电、缺陷检测工位、时序对齐</small></li>
         <li>芯片测试<small>朗讯 ATE：开短路、高低电平、输入电流</small></li>
       </ul>
     </div>
     <div class="skill-col">
-      <h3>软件</h3>
+      <h3>软件与嵌入式</h3>
       <ul>
+        <li>嵌入式<small>51 / STM32 / GD32 / ESP32，FreeRTOS</small></li>
+        <li>FPGA<small>Verilog、Quartus / Vivado，用过 xc7a35t</small></li>
         <li>C++ / STL<small>算法竞赛、上位机逻辑</small></li>
         <li>Python<small>上位机、数据处理、脚本化工具</small></li>
         <li>前端与界面<small>Vue 3 看板、串口调试工具</small></li>
