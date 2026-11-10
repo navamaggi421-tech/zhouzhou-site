@@ -2,3 +2,9 @@
 preview-*.png
 .DS_Store
 Thumbs.db
+
+# Tencent Cloud EdgeOne
+.env
+.edgeone/*
+.tef_dist/*
+  
