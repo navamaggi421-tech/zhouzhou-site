@@ -3,16 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>嵌入式 · 机器人 · 工业自动化 | 个人作品集</title>
-<meta name="description" content="机器人工程本科在读。ESP32/STM32 固件、PLC 顺控系统、机械臂与视觉、Python 上位机。">
-<!--
-  ===== 上线前只改这 4 处（都是占位）=====
-  1) <title> 和 og 标签里的名字
-  2) 首屏 lead 里的一行自我介绍（学校/专业/方向）
-  3) 项目区 5 个项目的文案与链接
-  4) 页脚邮箱 / 电话 / GitHub
-  单文件，零依赖，直接拖进 EdgeOne Pages 就能上线。
--->
+<title>周银豪 | 工业自动化 · 设备电气 · 嵌入式</title>
+<meta name="description" content="电气自动化。做过半导体设备的电气与程序：PLC、伺服与步进、传感与视觉联调，也写嵌入式固件和上位机。全国大学生智能汽车竞赛全国总决赛三等奖。">
+<meta property="og:title" content="周银豪 | 工业自动化 · 设备电气 · 嵌入式">
+<meta property="og:description" content="半导体设备电气与程序、PLC 顺控、运动控制、嵌入式固件。">
+<meta property="og:type" content="profile">
 <style>
 :root{
   --bg:#f7f7f4;
@@ -45,14 +40,12 @@ a{color:inherit;text-decoration:none}
 a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;transition:none}
 .hero a,.foot a{border-bottom:1px solid currentColor;padding-bottom:2px}
 
-/* ---------- 导航：小家具，无底无边 ---------- */
 .nav{display:flex;align-items:baseline;gap:clamp(1rem,3vw,2.5rem);padding:calc(var(--pad) * .55) var(--pad);font-size:var(--step-small)}
 .nav .me{font-weight:600;letter-spacing:-.01em}
 .nav .spacer{flex:1}
 .nav a{color:var(--muted)}
 .nav a:hover{color:var(--ink)}
 
-/* ---------- 首屏 ---------- */
 .hero{padding:calc(var(--pad) * .8) var(--pad) var(--line-gap);display:grid;gap:clamp(1.5rem,4vw,3rem);grid-template-columns:minmax(0,1fr)}
 @media (min-width:60rem){
   .hero{
@@ -65,15 +58,14 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 }
 .hero h1{font-size:var(--step-display);letter-spacing:-.04em;line-height:.98;text-wrap:balance}
 .hero h1 .dim{color:var(--muted)}
-.hero .col{display:grid;gap:1.25rem;align-content:end}
+.hero .col{display:grid;gap:1.35rem;align-content:center}
 .hero .lead{font-size:var(--step-lead);line-height:1.45;max-width:34ch;color:var(--ink)}
-.hero .meta{font-size:var(--step-small);color:var(--muted);display:grid;gap:.25rem;max-width:34ch}
+.hero .meta{font-size:calc(var(--step-small) + .0625rem);color:var(--muted);display:grid;gap:.35rem;max-width:36ch;line-height:1.5}
 .hero .cta{display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;font-size:var(--step-small);font-weight:600}
 .hero .cta a{border-bottom:1px solid var(--accent);color:var(--accent);padding-bottom:2px}
 
-/* ---------- 区块骨架 ---------- */
 section{padding:0 var(--pad)}
-.sec-head{display:grid;gap:1rem;padding-bottom:clamp(1.75rem,4vw,3rem);max-width:36ch}
+.sec-head{display:grid;gap:1rem;padding-bottom:clamp(1.75rem,4vw,3rem);max-width:42ch}
 .sec-head h2{font-size:var(--step-head)}
 .sec-head p{font-size:var(--step-body);color:var(--muted);max-width:52ch}
 .dark{background:var(--ink);color:var(--bg);margin-top:var(--line-gap);padding-top:calc(var(--line-gap) * .9);padding-bottom:calc(var(--line-gap) * .9)}
@@ -81,7 +73,6 @@ section{padding:0 var(--pad)}
 .dark .dark-in{display:grid;gap:0;padding:0 var(--pad);max-width:none}
 .dark h2{color:var(--bg)}
 
-/* ---------- 项目：非对称两列，-card 化 ---------- */
 .projects{display:grid;gap:clamp(1.75rem,3.5vw,2.75rem)}
 .proj{display:grid;gap:.4rem .25rem;grid-template-columns:minmax(0,1fr);padding-bottom:clamp(1.75rem,3.5vw,2.75rem);border-bottom:1px solid rgba(247,247,244,.14)}
 @media (min-width:52rem){
@@ -91,12 +82,24 @@ section{padding:0 var(--pad)}
 }
 .proj h3{font-size:clamp(1.25rem,1.05rem + .9vw,1.875rem);letter-spacing:-.02em;line-height:1.15}
 .proj .stack{font-size:var(--step-small);color:#9aa09c;display:flex;flex-wrap:wrap;gap:.35rem 1rem}
-.proj .body p{font-size:var(--step-body);color:#d9dcd7;max-width:50ch;line-height:1.55}
+.proj .body p{font-size:var(--step-body);color:#d9dcd7;max-width:52ch;line-height:1.55}
 .proj .body p + p{margin-top:.65rem}
 .proj .out{color:#8e948f;font-size:var(--step-small);margin-top:.75rem}
 .proj:last-child{border-bottom:0;padding-bottom:0}
 
-/* ---------- 技能：密排三列 ---------- */
+.awards{padding-top:var(--line-gap)}
+.aw-list{display:grid;gap:0;max-width:74ch}
+.aw{display:grid;grid-template-columns:minmax(0,1fr);gap:.15rem;padding:.9rem 0;border-bottom:1px solid rgba(22,24,26,.1);font-size:var(--step-body)}
+@media (min-width:44rem){
+  .aw{grid-template-columns:4.5rem minmax(0,1fr);gap:.15rem 1.25rem;align-items:baseline}
+  .aw .t{grid-column:2;margin:0}
+}
+.aw .y{color:var(--muted);font-size:var(--step-small);font-variant-numeric:tabular-nums}
+.aw .t em{font-style:normal;color:var(--muted);font-size:var(--step-small);display:block;margin-top:.15rem}
+.aw:last-child{border-bottom:0}
+.lv{display:inline-block;min-width:3.55em;text-align:center;font-size:.72em;letter-spacing:.06em;color:var(--accent);border:1px solid currentColor;border-radius:2px;padding:0 .22em;margin-right:.45em;vertical-align:.12em;font-weight:600}
+.lv.n{color:#8a3d1f}
+
 .skills{padding-top:var(--line-gap);padding-bottom:var(--line-gap)}
 .skill-grid{display:grid;gap:clamp(1.5rem,3vw,2.5rem);grid-template-columns:minmax(0,1fr)}
 @media (min-width:44rem){.skill-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
@@ -105,7 +108,11 @@ section{padding:0 var(--pad)}
 .skill-col li{display:grid;gap:.1rem}
 .skill-col li small{color:var(--muted);font-size:var(--step-small);line-height:1.4}
 
-/* ---------- 时间线：报纸感只此一处 ---------- */
+.certs{padding-bottom:var(--line-gap)}
+.certs h2{font-size:var(--step-head);margin-bottom:clamp(1.25rem,3vw,2rem)}
+.cert-row{display:flex;flex-wrap:wrap;gap:.6rem}
+.cert-row span{font-size:var(--step-small);background:var(--surface);padding:.45rem .8rem;border-radius:2px;color:var(--ink)}
+
 .now{padding-bottom:var(--line-gap)}
 .now h2{font-size:var(--step-head);margin-bottom:clamp(1.5rem,3vw,2.5rem)}
 .now ul{margin:0;padding:0;list-style:none;display:grid;gap:1rem;max-width:62ch}
@@ -113,9 +120,8 @@ section{padding:0 var(--pad)}
 .now li strong{font-weight:600}
 .now li span{color:var(--muted)}
 
-/* ---------- 结尾：反色大字号，只留一个事实 ---------- */
 .foot{background:var(--accent);color:var(--accent-ink);padding:calc(var(--line-gap) * .95) var(--pad);display:grid;gap:1.5rem}
-.foot h2{font-size:var(--step-head);color:var(--accent-ink);max-width:22ch}
+.foot h2{font-size:var(--step-head);color:var(--accent-ink);max-width:24ch}
 .foot .links{display:grid;gap:.5rem;font-size:var(--step-body);max-width:40ch}
 .foot .tail{font-size:var(--step-small);opacity:.72;margin-top:1rem}
 
@@ -132,24 +138,25 @@ section{padding:0 var(--pad)}
 <body>
 
 <nav class="nav">
-  <span class="me">你的名字</span>
-  <a href="#work">项目</a>
+  <span class="me">周银豪</span>
+  <a href="#work">设备</a>
+  <a href="#awards">荣誉</a>
   <a href="#skills">技能</a>
   <span class="spacer"></span>
-  <a href="mailto:you@example.com">邮箱</a>
+  <a href="mailto:15188460557@163.com">邮箱</a>
 </nav>
 
 <header class="hero">
-  <h1>嵌入式、机器人，<br><span class="dim">和它上面的界面。</span></h1>
+  <h1>把设备调通，<br><span class="dim">再让它一直跑。</span></h1>
   <div class="col">
-    <p class="lead">机器人工程本科在读，工业自动化方向。写 ESP32 与 STM32 固件、搭 PLC 顺控系统、把机械臂和相机连起来，也用 Python 做上位机。</p>
+    <p class="lead">电气自动化出身。做过半导体设备的电气与程序：选型、接线、PLC、伺服与步进、传感器和视觉联调；也写嵌入式固件和上位机。</p>
     <div class="meta">
-      <span>黄河交通学院 · 机器人工程</span>
-      <span>方向：嵌入式开发 / 机器人应用 / 工业自动化</span>
+      <span>黄河水利职业技术大学 · 电气自动化技术 · 2026 届</span>
+      <span>方向：工业自动化 / 设备电气 / 嵌入式</span>
     </div>
     <div class="cta">
-      <a href="#work">看做过的东西</a>
-      <a href="mailto:you@example.com">写信给我</a>
+      <a href="#work">看做过的设备</a>
+      <a href="mailto:15188460557@163.com">写信给我</a>
     </div>
   </div>
 </header>
@@ -157,59 +164,59 @@ section{padding:0 var(--pad)}
 <div class="dark">
   <div class="dark-in">
     <div class="sec-head">
-      <h2 id="work">五个真做过的项目</h2>
-      <p>都是能上电、能跑、能拿出来演示的。不是课程作业的截图集。</p>
+      <h2 id="work">做过的设备</h2>
+      <p>有实物、有程序、有交付。前三个是产线上的，后两个是自己攒的。</p>
     </div>
 
     <div class="projects">
 
       <article class="proj">
-        <h3>写字机：从字形到走刀</h3>
-        <div class="stack"><span>ESP32</span><span>ESP-IDF</span><span>FreeRTOS</span><span>Python</span></div>
+        <h3>晶圆插片机 · 电气负责人</h3>
+        <div class="stack"><span>S7-1200</span><span>伺服 ×2</span><span>步进 ×4</span><span>触摸屏</span></div>
         <div class="body">
-          <p>固件侧用 ESP-IDF 做运动控制：G-code 解析、加减速规划、步进电机脉冲调度，跑在 FreeRTOS 任务里，串口和运动解耦。</p>
-          <p>电脑侧用 Python 做"出形"：把文字转成笔画轨迹，再生成给固件的指令流。视觉部分负责找纸和定位。</p>
-          <div class="out">状态：固件与轨迹生成已跑通，正在联调整机</div>
+          <p>主导电气选型、柜内接线和 PLC 程序，实现 4/6/8 英寸硅片分选：气嘴吹开硅片、无痕吸盘取片、传送带送料、硅片盒顶升。</p>
+          <p>动作链是 2 个伺服 + 2 个 42 丝杆步进 + 2 个 42 步进。和机械工程师逐点定传感器位置，测灵敏度、排动作时序，独立做完这款设备的程序和画面。</p>
+          <div class="out">交付：电气原理图 + PLC 程序 + 触摸屏画面</div>
+        </div>
+      </article>
+
+      <article class="proj">
+        <h3>晶振石英片分捡机</h3>
+        <div class="stack"><span>PLC</span><span>伺服转盘</span><span>基恩士光电</span><span>视觉检测</span></div>
+        <div class="body">
+          <p>石英片由振动盘上料，落到伺服驱动的圆形带槽玻璃转盘上。入料处的基恩士光电给信号，PLC 依据伺服编码器算每一片的初始位置。</p>
+          <p>片子经过视觉工位触发拍照判缺陷，视觉回传缺陷类型，到对应区域吹气分仓，满料报警。</p>
+          <div class="out">交付：PLC 程序 + 电气接线 + 与视觉团队的接口联调</div>
+        </div>
+      </article>
+
+      <article class="proj">
+        <h3>室外 5G 远程驾驶无人车</h3>
+        <div class="stack"><span>全国大学生智能汽车竞赛</span><span>5G 远程链路</span><span>团队</span></div>
+        <div class="body">
+          <p>第十九届全国大学生智能汽车竞赛，室外 5G 远程驾驶无人车赛项，全国总决赛三等奖。</p>
+          <p>我负责车体电气与传感链路、远程控制链路的联调：车端信号怎么采、怎么传，延时和丢包怎么在现场压下去。</p>
+          <div class="out">2024 · 中国自动化学会</div>
         </div>
       </article>
 
       <article class="proj">
         <h3>洗车机顺序控制系统</h3>
-        <div class="stack"><span>TIA Portal V20</span><span>SCL</span><span>CPU 1518T-3 PN</span><span>KTP1200 HMI</span></div>
+        <div class="stack"><span>TIA Portal</span><span>SCL</span><span>CPU 1518T-3 PN</span><span>KTP1200</span></div>
         <div class="body">
-          <p>用状态字驱动顺控，不用 S 步：状态寄存器 + 定时器 + 互锁条件，每一步的进入退出条件都写在 SCL 里，便于在 HMI 上直接看到当前步。</p>
+          <p>用状态字驱动顺控，不走 S 步：状态寄存器 + 定时器 + 互锁条件，每一步的进入退出条件都写在 SCL 里，HMI 上能直接看到当前是第几步。</p>
           <p>触摸屏做画面与参数设定，虚拟轴做定位运动。</p>
-          <div class="out">交付：程序 + 电气原理图 + 课程设计计算书</div>
+          <div class="out">交付：程序 + 电气原理图 + 计算书</div>
         </div>
       </article>
 
       <article class="proj">
-        <h3>机械臂与数据采集</h3>
-        <div class="stack"><span>SO-ARM100</span><span>LeRobot</span><span>总线舵机</span><span>ROS2</span></div>
+        <h3>写字机：从字形到走刀</h3>
+        <div class="stack"><span>ESP32</span><span>ESP-IDF</span><span>FreeRTOS</span><span>Python</span></div>
         <div class="body">
-          <p>总线舵机链路的接入与调试：ID 分配、波特率、回读校准；接上 LeRobot 做遥操作与示教数据采集，再跑模仿学习看效果。</p>
-          <p>上位机在 Ubuntu 上跑，CUDA 加速训练。</p>
-          <div class="out">状态：单臂示教采集可用，正在做抓取任务</div>
-        </div>
-      </article>
-
-      <article class="proj">
-        <h3>两级减速器三维与强度校核</h3>
-        <div class="stack"><span>SolidWorks</span><span>参数化建模</span><span>齿轮强度</span></div>
-        <div class="body">
-          <p>按设计参数用脚本驱动 SolidWorks 出三维：齿轮、轴、箱体全参数化，改模数齿数就自动重生成，配工程图与装配干涉检查。</p>
-          <p>设计校核按接触疲劳与弯曲疲劳两路算，结果回写到计算书。</p>
-          <div class="out">交付：三维模型 + 装配图 + 计算书</div>
-        </div>
-      </article>
-
-      <article class="proj">
-        <h3>ESP32 → FastAPI → 看板</h3>
-        <div class="stack"><span>ESP32</span><span>FastAPI</span><span>Vue 3</span><span>MQTT</span></div>
-        <div class="body">
-          <p>传感器数据从板子经 HTTP 上报到 FastAPI，存库后用接口吐给 Vue 页面做实时看板；板子侧有 NVS 网页配网，不拆机就能改 WiFi。</p>
-          <p>整条链路在本地跑通，下一步接板卡做长期采集。</p>
-          <div class="out">状态：链路可用，正在加设备管理</div>
+          <p>固件侧做运动控制：G-code 解析、加减速规划、步进脉冲调度，跑在 FreeRTOS 任务里，串口和运动解耦。</p>
+          <p>电脑侧用 Python 出形：文字转笔画轨迹，再生成给固件的指令流。视觉部分负责找纸和定位。</p>
+          <div class="out">状态：固件与轨迹生成已跑通，整机联调中</div>
         </div>
       </article>
 
@@ -217,58 +224,88 @@ section{padding:0 var(--pad)}
   </div>
 </div>
 
+<section class="awards">
+  <div class="sec-head">
+    <h2 id="awards">荣誉</h2>
+    <p>国家级 2 项，省级 5 项，校级 1 项。</p>
+  </div>
+  <div class="aw-list">
+    <div class="aw"><span class="y">2024</span><span class="t"><span class="lv n">国家级</span>全国大学生智能汽车竞赛 · 室外 5G 远程驾驶无人车赛 · 全国总决赛三等奖<em>中国自动化学会</em></span></div>
+    <div class="aw"><span class="y">2024</span><span class="t"><span class="lv">省级</span>蓝桥杯 · C++ 程序设计 · 省二等奖<em>工业和信息化部人才交流中心</em></span></div>
+    <div class="aw"><span class="y">2024</span><span class="t"><span class="lv">校级</span>“一院一赛事”图学技能创新赛 · 三等奖<em>黄河水利职业技术学院</em></span></div>
+    <div class="aw"><span class="y">2023</span><span class="t"><span class="lv">省级</span>河南省第二届职业技能大赛 · 电气装置（世赛项目）决赛 · 优胜奖<em>河南省人力资源和社会保障厅</em></span></div>
+    <div class="aw"><span class="y">2022</span><span class="t"><span class="lv">省级</span>河南省中等职业教育技能大赛 · 电气安装与维修 · 一等奖<em>河南省教育厅</em></span></div>
+    <div class="aw"><span class="y">2021</span><span class="t"><span class="lv">省级</span>河南省中等职业教育技能大赛 · 维修电工 · 一等奖<em>河南省教育厅</em></span></div>
+    <div class="aw"><span class="y">—</span><span class="t"><span class="lv">省级</span>全国大学生集成电路创新创业大赛 · 河南省一等奖<em>核心成员，负责测试电路选型与验证程序</em></span></div>
+    <div class="aw"><span class="y">—</span><span class="t"><span class="lv n">国家级</span>国家奖学金<em>中华人民共和国教育部</em></span></div>
+  </div>
+</section>
+
 <section class="skills">
   <div class="sec-head">
-    <h2 id="skills">会用的东西，分三堆</h2>
-    <p>写"用它在什么项目里干过"，不写百分比。</p>
+    <h2 id="skills">会用的东西</h2>
+    <p>写“用它在什么活里干过”，不写熟练度百分比。</p>
   </div>
   <div class="skill-grid">
     <div class="skill-col">
-      <h3>固件与硬件</h3>
+      <h3>工业控制</h3>
       <ul>
-        <li>ESP-IDF / Arduino<small>ESP32、ESP8266：任务调度、看门狗、NVS 配网</small></li>
-        <li>STM32 + FreeRTOS<small>CubeCLT 工具链、pyOCD 烧录、最小系统板调试</small></li>
-        <li>KiCad / 串口排障<small>原理图与 BOM，串口链路逐层隔离定位</small></li>
-        <li>总线舵机 / 传感器<small>STS 协议、ID 与回读校准、标定</small></li>
+        <li>西门子 S7-1200 / 1500 / 200<small>TIA Portal；LD、FBD、SFC、ST 四种写法都写过</small></li>
+        <li>三菱 / 汇川 2U·3U / 欧姆龙<small>多品牌程序移植、老设备改型维护</small></li>
+        <li>运动控制<small>固高 GTS800、伺服与步进点位、电子齿轮</small></li>
+        <li>HMI 与配方<small>触摸屏画面、参数设定、报警记录</small></li>
       </ul>
     </div>
     <div class="skill-col">
-      <h3>工业控制</h3>
+      <h3>电气与硬件</h3>
       <ul>
-        <li>Siemens TIA Portal<small>SCL 编程、状态字顺控、HMI 画面、虚拟轴定位</small></li>
-        <li>SolidWorks<small>参数化建模、装配、工程图、齿轮强度校核</small></li>
-        <li>PLC 程序结构<small>分层：设备层 / 顺序层 / 安全层，便于改和查</small></li>
+        <li>电气设计<small>原理图、元件选型、柜内接线、上电调试</small></li>
+        <li>传感与视觉联调<small>基恩士光电、缺陷检测工位、动作时序对齐</small></li>
+        <li>嵌入式<small>51 / STM32 / GD32，做过简易示波器和万用表</small></li>
+        <li>FPGA<small>Verilog、Quartus / Vivado，用过 xc7a35t</small></li>
+        <li>芯片测试<small>朗讯 ATE：开短路、高低电平、输入电流</small></li>
       </ul>
     </div>
     <div class="skill-col">
       <h3>软件</h3>
       <ul>
-        <li>Python<small>FastAPI 接口、OpenCV 视觉、脚本驱动 CAD</small></li>
-        <li>Linux / ROS2<small>Ubuntu 24.04、Jazzy、SSH 远程调试</small></li>
-        <li>前端与上位机<small>Vue 3 看板、Qt/C# 桌面程序</small></li>
-        <li>Git / Docker<small>日常提交、容器起服务</small></li>
+        <li>C++ / STL<small>算法竞赛、上位机逻辑</small></li>
+        <li>Python<small>上位机、数据处理、脚本化工具</small></li>
+        <li>前端与界面<small>Vue 3 看板、串口调试工具</small></li>
+        <li>Linux / Git<small>Ubuntu 上跑服务、日常提交</small></li>
       </ul>
     </div>
+  </div>
+</section>
+
+<section class="certs">
+  <h2>资格证</h2>
+  <div class="cert-row">
+    <span>电工高级</span>
+    <span>低压电工证</span>
+    <span>ABB 机械臂（初级）</span>
+    <span>车工（初级）</span>
+    <span>C1 驾驶证</span>
   </div>
 </section>
 
 <section class="now">
   <h2>最近在弄</h2>
   <ul>
-    <li><strong>写字机整机联调</strong><span>把固件、轨迹生成、视觉定位三块接起来</span></li>
-    <li><strong>FreeRTOS 系列工程</strong><span>每个机制一个最小可跑工程，调度、队列、时间片、看门狗</span></li>
-    <li><strong>摄像头与边缘板卡</strong><span>RK3566 上做采集与推流，接工业场景</span></li>
+    <li><strong>写字机整机联调</strong><span>固件、轨迹生成、视觉定位三块接起来</span></li>
+    <li><strong>FreeRTOS 系列工程</strong><span>每个机制一个最小可跑工程：任务调度、队列、时间片、看门狗</span></li>
+    <li><strong>上位机与看板</strong><span>ESP32 上报 → FastAPI → 网页实时显示</span></li>
   </ul>
 </section>
 
 <footer class="foot">
-  <h2>在找嵌入式 / 机器人应用方向的实习与工作</h2>
+  <h2>在找工业自动化 / 设备电气 / 嵌入式方向的工作</h2>
   <div class="links">
-    <a href="mailto:you@example.com">you@example.com</a>
-    <a href="tel:+8610000000000">+86 100 0000 0000</a>
-    <a href="https://github.com/yourname">github.com/yourname</a>
+    <a href="mailto:15188460557@163.com">15188460557@163.com</a>
+    <a href="tel:+8615188460557">151 8846 0557</a>
+    <a href="https://github.com/navamaggi421-tech">github.com/navamaggi421-tech</a>
   </div>
-  <p class="tail">本站为静态页面，托管于 EdgeOne Pages。</p>
+  <p class="tail">静态页面，托管于 GitHub Pages。</p>
 </footer>
 
 </body>
