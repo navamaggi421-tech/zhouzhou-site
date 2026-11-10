@@ -1,0 +1,4 @@
+# 本地验收截图，不进仓库
+preview-*.png
+.DS_Store
+Thumbs.db
